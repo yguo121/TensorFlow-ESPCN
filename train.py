@@ -9,7 +9,7 @@ def train():
     训练
     :return:
     """
-    prepare_data.prepare_data_()
+    prepare_data.Prepare_Data()
     with tf.Session() as sess:
         espcn = ESPCN(sess,
                       is_train=True,

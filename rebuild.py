@@ -9,7 +9,7 @@ TEST_IMAGE_DIR = './test_images/Set14/'
 TEST_RESULT_DIR = './result/Set14/'
 
 
-def rebuild(img_name):
+def rebuild_(img_name):
     """
     图像超分辨率重建
     :return:
@@ -46,4 +46,4 @@ if __name__ == '__main__':
     img_list = [filename for filename in os.listdir(
         TEST_IMAGE_DIR) if filename.endswith('jpg')]
     for filename in img_list:
-        rebuild(filename)
+        rebuild_(filename)

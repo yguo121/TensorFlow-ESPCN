@@ -83,7 +83,7 @@ def make_data_hf(input_, label_):
         hf.create_dataset('label', data=label_)
 
 
-def prepare_data_(dataset='images'):
+def Prepare_Data(dataset='images'):
     """
     :param dataset:
     :return:
@@ -98,4 +98,4 @@ def prepare_data_(dataset='images'):
 
 
 if __name__ == '__main__':
-    prepare_data_(dataset='images')
+    Prepare_Data(dataset='images')

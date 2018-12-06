@@ -7,7 +7,7 @@ TEST_IMAGE_DIR = './test_images/Set14/'
 TEST_RESULT_DIR = './result/Set14/'
 
 
-def psnr(image_a, image_b):
+def PSNR(image_a, image_b):
     image_a_data = np.asarray(image_a).astype('float32')
     image_b_data = np.asarray(image_b).astype('float32')
     diff = image_a_data - image_b_data
@@ -32,8 +32,8 @@ if __name__ == '__main__':
         bi_image = lr_image.resize(sr_image.size, Image.BICUBIC)
         lr_image = lr_image.resize(sr_image.size)
 
-        hr_lr_value = psnr(hr_image, lr_image)
-        hr_sr_value = psnr(hr_image, sr_image)
-        hr_bi_value = psnr(hr_image, bi_image)
+        hr_lr_value = PSNR(hr_image, lr_image)
+        hr_sr_value = PSNR(hr_image, sr_image)
+        hr_bi_value = PSNR(hr_image, bi_image)
         print(img_name, '\t\tLR:\t%f\tESPCN:\t%f\tBICUBIC:\t%f' %
               (hr_lr_value, hr_sr_value, hr_bi_value))
